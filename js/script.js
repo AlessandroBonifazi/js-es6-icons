@@ -129,4 +129,22 @@ const iconLibrary = [
 
 const container = document.getElementById('icon-container');
 
+let animalIcon = iconLibrary.filter((element) => element.type === "animal");
+
+let vegetableIcon = iconLibrary.filter((element) => element.type === "vegetable");
+
+let userIcon = iconLibrary.filter((element) => element.type === "user");
+
+
+
 // Functions
+function createIcon(array) {
+    array.forEach((element) => {
+        const iconFrame = document.createElement('div');
+        container.appendChild(iconFrame);
+        iconFrame.innerHTML = `<div style="color:${element.color}"<i class="${element.family} ${element.prefix}${element.name} fa-2x"></i>
+        <p>${element.name}</p></div>`;
+    });
+}
+
+createIcon(iconLibrary);
