@@ -4,6 +4,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: lightskyblue;
+}
 /* Utility */
-
+.ab-iconCard {
+    height: 80px;
+    width: calc(100% / 5);
+    margin: 30px ;
+    background-color: aliceblue;
+    border-radius: 15px;
+    border-bottom: 5px solid darkblue;
+    border-right: 5px solid darkblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 /* Content */
+#icon-container {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ab-iconCard span {
+    font-size: 20px;
+}
+
+.ab-iconCard:hover {
+    cursor: pointer;
+    border-bottom: 2px solid darkblue;
+    border-right: 2px solid darkblue;
+}

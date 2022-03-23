@@ -16,19 +16,31 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <select id="select" onchange="iconToShow()">
-                <option value="all">All</option>
-                <option value="user">User</option>
-                <option value="animal">Animal</option>
-                <option value="vegetables">Vegetables</option>
-            </select>
-        </nav>
+    <header class="container-fluid text-center text-white bg-dark bg-gradient py-3">
+        <div class="row">
+            <div class="col-12">
+                <h1>JS ICON</h1>
+                <h3>Category</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <nav>
+                    <select id="select" onchange="iconToShow()">
+                        <option value="all">All</option>
+                        <option value="user">User</option>
+                        <option value="animal">Animal</option>
+                        <option value="vegetables">Vegetables</option>
+                    </select>
+                </nav>
+            </div>
+        </div>
     </header>
-    <main>
-        <div id="icon-container" class="container-fluid">
 
+    <main class="container-fluid bg-succes bg-gradient">
+        <div class="row">
+            <div id="icon-container">
+            </div>
         </div>
     </main>
 </body>

@@ -141,20 +141,26 @@ const select = document.getElementById('select');
 function createIcon(array) {
     array.forEach((element) => {
         const iconFrame = document.createElement('div');
+        iconFrame.classList.add('ab-iconCard');
         container.appendChild(iconFrame);
-        iconFrame.innerHTML = `<div style="color:${element.color}"<i class="${element.family} ${element.prefix}${element.name} fa-2x"></i>
-        <span>${element.name}</span></div>`;
+        iconFrame.innerHTML = `<div style="color:${element.color}"
+        <i class="${element.family} ${element.prefix}${element.name} fa-2x"></i></div>
+        <div><span>${element.name}</span></div>`;
     });
 }
 
 function iconToShow() {
     if (select.value === "all") {
+        container.innerHTML = '';
         createIcon(iconLibrary);
     } else if (select.value === "user") {
+        container.innerHTML = '';
         createIcon(userIcon);
     } else if (select.value === "animal") {
+        container.innerHTML = '';
         createIcon(animalIcon);
     } else if (select.value === "vegetables") {
+        container.innerHTML = '';
         createIcon(vegetableIcon);
     }
 }
