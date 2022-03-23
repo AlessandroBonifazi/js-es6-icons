@@ -129,13 +129,13 @@ const iconLibrary = [
 
 const container = document.getElementById('icon-container');
 
-let animalIcon = iconLibrary.filter((element) => element.type === "animal");
+const animalIcon = iconLibrary.filter((element) => element.type === "animal");
 
-let vegetableIcon = iconLibrary.filter((element) => element.type === "vegetable");
+const vegetableIcon = iconLibrary.filter((element) => element.type === "vegetable");
 
-let userIcon = iconLibrary.filter((element) => element.type === "user");
+const userIcon = iconLibrary.filter((element) => element.type === "user");
 
-
+const select = document.getElementById('select');
 
 // Functions
 function createIcon(array) {
@@ -143,8 +143,18 @@ function createIcon(array) {
         const iconFrame = document.createElement('div');
         container.appendChild(iconFrame);
         iconFrame.innerHTML = `<div style="color:${element.color}"<i class="${element.family} ${element.prefix}${element.name} fa-2x"></i>
-        <p>${element.name}</p></div>`;
+        <span>${element.name}</span></div>`;
     });
 }
 
-createIcon(iconLibrary);
+function iconToShow() {
+    if (select.value === "all") {
+        createIcon(iconLibrary);
+    } else if (select.value === "user") {
+        createIcon(userIcon);
+    } else if (select.value === "animal") {
+        createIcon(animalIcon);
+    } else if (select.value === "vegetables") {
+        createIcon(vegetableIcon);
+    }
+}
