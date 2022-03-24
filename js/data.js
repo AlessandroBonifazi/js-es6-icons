@@ -1,4 +1,4 @@
-[
+const iconLibrary = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
